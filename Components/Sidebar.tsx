@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import {HomeIcon} from '@heroicons/react/24/outline'
 import {MagnifyingGlassCircleIcon} from '@heroicons/react/24/outline'
@@ -7,12 +7,29 @@ import {HeartIcon} from '@heroicons/react/24/outline'
 import {RssIcon} from '@heroicons/react/24/outline'
 import {PlusCircleIcon} from '@heroicons/react/24/outline'
 import { signOut,useSession } from 'next-auth/react'
+import useSpotify from '../hooks/useSpotify'
+import {useRecoilState} from 'recoil';
+import { playlistIdState } from '../atoms/playlistAtom'
+
 
 function Sidebar() {
-   const {data: session,status}=useSession();
+  const spotifyApi = useSpotify()
+  const {data: session, status} = useSession();
   console.log(session);
+  const [playlists,setPlaylists] =  useState([])
+  const [playlistId,setPlaylistId] = useRecoilState(playlistIdState);
+
+  useEffect(() => {
+      if(spotifyApi.getAccessToken()) {
+          spotifyApi.getUserPlaylists().then((data) => {
+              setPlaylists(data.body.items);
+          })
+      }
+  },[session,spotifyApi])
+
+  console.log(playlists);
   return (
-    <div className='text-gray-400 p-5 text-sm border-r border-gray-900'>
+    <div className='text-gray-500 p-5 text-xs border-r border-gray-900 overflow-y-scroll h-screen scrollbar-hide lg:text-sm sm:max-w-[12rem] lg:max-w-[15rem] lg:w-64 hidden md:inline-flex '> 
       <div className='space-y-4'>
         <button className='flex items-center space-x-2 hover:text-white' onClick={()=>signOut()}>
           <HomeIcon className='h-8 w-8'/>
@@ -51,34 +68,10 @@ function Sidebar() {
         <hr className='border-t-[1px] border-gray-900'/>
 
         {/* Playlist */}
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name....</p>
+        {playlists.map((playlist)=>(
+          <p onClick={() => setPlaylistId(playlist.id)} key={playlist.id} className='font-bold cursor-pointer hover:text-white'>{playlist.name}</p>
+        ))}
+        
 
       </div>
     </div>
