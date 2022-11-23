@@ -10,7 +10,7 @@ import { signOut,useSession } from 'next-auth/react'
 import useSpotify from '../hooks/useSpotify'
 import {useRecoilState} from 'recoil';
 import { playlistIdState } from '../atoms/playlistAtom'
-
+import Search from './Search'
 
 function Sidebar() {
   const spotifyApi = useSpotify()
@@ -40,10 +40,10 @@ function Sidebar() {
           <p>Home</p>
         </button>
       
-        <button className='flex items-center space-x-2 hover:text-white'>
-          <MagnifyingGlassCircleIcon className='h-8 w-8'/>
-          <p>Search</p>
-        </button>
+        
+          
+          <Search/>
+        
       
         <button className='flex items-center space-x-2 hover:text-white'>
           <BuildingLibraryIcon className='h-8 w-8'/>
