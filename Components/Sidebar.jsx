@@ -42,7 +42,7 @@ function Sidebar() {
       
         
           
-          <Search/>
+          {/* <Search/> */}
         
       
         <button className='flex items-center space-x-2 hover:text-white'>

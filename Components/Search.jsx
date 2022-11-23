@@ -1,15 +1,31 @@
+// import { link } from 'fs';
 import React from 'react'
 import {useState,useEffect} from 'react';
 
 
 const CLINET_ID=process.env.NEXT_PUBLIC_CLIENT_ID;
 const CLIENT_SECRET=process.env.NEXT_PUBLIC_CLIENT_SECRET;
+var shuffle =require('lodash.shuffle');
+const colors = [
+
+  "from-black-300",
+  // "from-indigo-700",
+  // "from-blue-700",
+  // "from-green-700",
+  // "from-red-700",
+  // "from-yellow-700",
+  // "from-pink-700",
+  // "from-purple-700",
+];
 
 function Search() {
   const [searchInput,setSearchInput]=useState("");
   const [accessToken,setAccessToken]=useState("")
   const [albums, setAlbums]=useState([]);
-
+  const [color, setColor] = useState(null);
+  useEffect(() => {
+    setColor(shuffle(colors).pop());
+  }, [search])
   useEffect(()=>{
     var authParameters={
       method:'POST',
@@ -53,17 +69,20 @@ var returnedAlbums=await fetch('https://api.spotify.com/v1/artists/' + artistID+
 console.log("*#*#*#**# FINAL ALBUMS",albums)
 
   return (
-    <div>
+    <div >
            
 
-    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-    <div class="relative">
+    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+    <div class="relative" className="absolute top-0 right-30 w-[50%]">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
         </div>
-        <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for ..." required 
+        <input type="search" id="" class="block w-full p-4 pl-10 text-sm text-gray-100  rounded-lg bg-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-black-700  dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for ..." required 
         onKeyPress={event=>{
           if(event.key=="Enter"){
+            if(searchInput==""){
+              return(setAlbums([]))
+            }
             search();
           }
         }}
@@ -79,7 +98,7 @@ console.log("*#*#*#**# FINAL ALBUMS",albums)
         console.log(album);
         return(
           <>
-           //  <iframe  src={"https://open.spotify.com/embed/album/" +album.id+ "?utm_source=generator" }width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+             <iframe className={`bg-gradient-to-b to-black ${color} pt-8 `} src={"https://open.spotify.com/embed/album/" +album.id+ "?utm_source=generator" }width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="fast"></iframe>
           </>
         )
       })}

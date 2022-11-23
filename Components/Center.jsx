@@ -5,6 +5,7 @@ var shuffle =require('lodash.shuffle');
 import {useRecoilState,useRecoilValue} from 'recoil';
 import { playlistIdState, playlistState } from '../atoms/playlistAtom';
 import useSpotify from '../hooks/useSpotify';
+import Search from './Search';
 import Songs from './Songs';
 
 const colors = [
@@ -41,6 +42,7 @@ function Center() {
 
   return (
     <div className=' flex-grow h-screen overflow-y-scroll scrollbar-hide  text-white'>
+      <Search className="absolute top-0 left-1 w-[50%]"/>
       <header className='absolute top-5 right-8'>
         <div className={`flex items-center bg-gray-900 space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2`} onClick={signOut} >
           <img className='rounded-full w-10 h-10' src={session?.user?.image} alt='' />
