@@ -42,15 +42,15 @@ function Center() {
 
   return (
     <div className=' flex-grow h-screen overflow-y-scroll scrollbar-hide  text-white'>
-      <Search className="absolute top-0 left-1 w-[50%]"/>
-      <header className='absolute top-5 right-8'>
+      <Search />
+      <header className='absolute top-5 right-8 w-[17%]'>
         <div className={`flex items-center bg-gray-900 space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2`} onClick={signOut} >
           <img className='rounded-full w-10 h-10' src={session?.user?.image} alt='' />
-          <h2>{session?.user?.name}</h2>
+          <h2 >{session?.user?.name}</h2>
           <ChevronDownIcon className='h-5 w-5' />
         </div>
       </header>
-      <section className={`flex items-end space-x-7 bg-gradient-to-b to-black ${color} h-80 text-white padding-8 `}>
+      <section className={`flex items-end space-x-7 bg-gradient-to-b to-black ${color} h-96 text-white padding-8 `}>
 
       <img className="h-64 w-64 shadow-2xl" src={playlist?.images?.[0].url} alt="" />
 
