@@ -5,7 +5,7 @@ import { getSession, GetSessionParams } from "next-auth/react";
 import Player from "../Components/Player";
 import Background from "../Components/Background";
 
-const ADDMYNFT = () => {
+const MyCollection = () => {
   return (
     <>
       <div className="bg-black h-screen overflow-hidden">
@@ -32,4 +32,4 @@ export async function getServerSideProps(
   };
 }
 
-export default ADDMYNFT;
+export default MyCollection;
