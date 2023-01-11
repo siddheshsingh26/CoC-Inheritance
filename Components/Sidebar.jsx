@@ -33,41 +33,103 @@ function Sidebar() {
     <div className="text-gray-500 p-5 text-xs border-r border-gray-900 overflow-y-scroll h-screen scrollbar-hide lg:text-sm sm:max-w-[12rem] lg:max-w-[15rem] lg:w-64 hidden md:inline-flex ">
       <div className="space-y-4">
         <button
-          className="flex items-center space-x-2 hover:text-white"
+          className="flex
+
+
+
+        w-full rounded-md p-2
+        py-3
+        hover:bg-green-700 
+
+
+
+        items-center space-x-2 hover:text-white   text-xl"
           onClick={() => signOut()}
         >
           <HomeIcon className="h-8 w-8" />
-          <p>Logout</p>
+
+          <p className=" relative  group ">
+            <span className="m-1">Logout</span>
+            <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
+            <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
+          </p>
         </button>
         <Link href={"/"}>
-          <button className="flex items-center space-x-2 hover:text-white">
-            <HomeIcon className="h-8 w-8" />
-            <p>Home</p>
+          <button
+            className="flex
+          w-full rounded-md p-2
+          py-3
+          hover:bg-green-700 
+        
+        items-center space-x-2 hover:text-white text-xl"
+          >
+            <HomeIcon
+              className="h-8 w-8 
+          "
+            />
+            <p className=" relative  group ">
+              <span className="m-1">Home</span>
+              <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
+              <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
+            </p>
           </button>
         </Link>
         {/* <Search/> */}
         <Link href={"/MyCollections"}>
-          <button className="flex items-center space-x-2 hover:text-white">
+          <button
+            className="flex 
+          w-full rounded-md p-2
+          py-3
+          hover:bg-green-700 items-center space-x-2 hover:text-white text-xl"
+          >
             <BuildingLibraryIcon className="h-8 w-8" />
-            <p>My Collections</p>
+            <p className=" relative  group ">
+              <span className="m-1">My Collections</span>
+              <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
+              <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
+            </p>
           </button>
         </Link>
         <hr className="border-t-[1px] border-gray-900" />
         <Link href={"/ADDMYNFT"}>
-          <button className="flex items-center space-x-2 hover:text-white">
+          <button
+            className="flex   w-full rounded-md p-2
+        py-3
+        hover:bg-green-700  items-center space-x-2 hover:text-white text-xl"
+          >
             <PlusCircleIcon className="h-8 w-8" />
-            <p>ADD MY NFT</p>
+            <p className=" relative  group ">
+              <span className="m-1">ADD MY NFT</span>
+              <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
+              <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
+            </p>
           </button>
         </Link>
 
-        <button className="flex items-center space-x-2 hover:text-white">
+        <button
+          className="flex   w-full rounded-md p-2
+        py-3
+        hover:bg-green-700  items-center space-x-2 hover:text-white text-xl"
+        >
           <HeartIcon className="h-8 w-8" />
-          <p>Liked Songs</p>
+          <p className=" relative  group ">
+            <span className="m-1">Liked Songs</span>
+            <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
+            <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
+          </p>
         </button>
 
-        <button className="flex items-center space-x-2 hover:text-white">
+        <button
+          className="flex   w-full rounded-md p-2
+        py-3
+        hover:bg-green-700  items-center space-x-2 text-xl hover:text-white"
+        >
           <RssIcon className="h-8 w-8" />
-          <p>Your Episodes</p>
+          <p className=" relative  group ">
+            <span className="m-1">Your Episode</span>
+            <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
+            <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
+          </p>
         </button>
         <hr className="border-t-[1px] border-gray-900" />
 
