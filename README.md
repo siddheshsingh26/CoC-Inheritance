@@ -102,7 +102,7 @@ Future plans for our project
 `JWT_SECRET=some_super_secret_value`
 3. Start the Website
   `bash`
-   `npm run dev`
+  `npm run dev`
 
 ## 💻Usage
 
