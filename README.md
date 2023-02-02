@@ -116,8 +116,8 @@ Future plans for our project
 
 ## 👨‍🏫Mentors
 
-- [Sarvagnya Purohit](https://github.com/saRvaGnyA):
-- [Dhrumil Raigagla](https://github.com/Dhrumil07): 
+- [Sarvagnya Purohit](https://github.com/saRvaGnyA)
+- [Dhrumil Raigagla](https://github.com/Dhrumil07) 
 
 ## 📱Screenshots
 Add a few screenshots for parts of the project completed till now to give the viewer a quick idea of what your project looks like. After all, a picture speaks a thousand words.
