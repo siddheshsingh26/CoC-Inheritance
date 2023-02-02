@@ -38,7 +38,7 @@ In addition to mining, NFTones also features a full-featured music player, with 
 ## 🔗Links
 
 - [GitHub Repository](https://github.com/siddheshsingh26/CoC-Inheritance.git)
-- [Demo Video]()
+- [Demo Video](https://drive.google.com/file/d/1OZgOtzm7Y0qowh1BFyz_aOtdCbvI8mkD/view?usp=sharing)
 - [Drive Link to Screenshots of your project]()
 - [Hosted Backend Link]()
 
@@ -90,7 +90,8 @@ Future plans for our project
 
 ## 🛠Project Setup
 
->Include your project setup basics here. Steps for how someone else can setup your project on their machine. Add any relevant details as well.
+
+>
 
 ## 💻Usage
 
@@ -98,17 +99,14 @@ Future plans for our project
 
 ## 👨‍💻Team Members
 
-Add names of your team members with their emails and links to their GitHub accounts
-
-- [Team Member 1 Name](https://github.com/): Email 
-- [Team Member 2 Name](https://github.com/): Email 
+- [Siddheshsingh Tanwar](https://github.com/siddheshsingh26): siddheshsinghtanwar@gmail.com 
+- [Shrived Kakde](https://github.com/Shrived00): shrivedkakde00@gmail.com 
+- - [Pratham Deshmukh](https://github.com/Pratham-Bot): mast.deshmukh@gmail.com 
 
 ## 👨‍🏫Mentors
 
-Add names of your mentors with their emails and links to their GitHub accounts
-
-- [Mentor 1 Name](https://github.com/): Email 
-- [Mentor 2 Name](https://github.com/): Email 
+- [Sarvagnya Purohit](https://github.com/saRvaGnyA): Email 
+- [Dhrumil Raigagla](https://github.com/Dhrumil07): Email
 
 ## 📱Screenshots
 Add a few screenshots for parts of the project completed till now to give the viewer a quick idea of what your project looks like. After all, a picture speaks a thousand words.
