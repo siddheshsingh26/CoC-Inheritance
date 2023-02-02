@@ -90,8 +90,21 @@ Future plans for our project
 
 ## 🛠Project Setup
 
+1. Clone the repository
+  `bash`  
+  `git clone https://github.com/siddheshsingh26/CoC-Inheritance.git`
 
->
+2. add env file
+`
+bash
+NEXTAUTH_URL=http://localhost:3000
+NEXT_PUBLIC_CLIENT_SECRET=07001218db934c32b87fa3674ca53026
+NEXT_PUBLIC_CLIENT_ID= 9d8ded4eb10448aab139f0a50657d6fa
+JWT_SECRET=some_super_secret_value
+`
+3. Start the Website
+  `bash`
+   `npm run dev`
 
 ## 💻Usage
 
