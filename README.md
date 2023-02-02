@@ -106,8 +106,14 @@ Future plans for our project
 
 ## 💻Usage
 
->Steps to run your project once its setup. If you have an app or website, list how the user can go about using it.
-
+- First of all you must clone the repo.After the following the Project setup the website be started.
+- Now you have to login with the spotify.
+- After login or signup you will be redirected to Home page of the Music Player
+- On this page your spotify made Playlist will be present 
+- You can enjoy the Playlist with No Adds.
+- On top of the every page a search bar is there for searching artists albums 
+- Process to Mint page has steps to follow for minting an NFT for NOW!!
+- 
 ## 👨‍💻Team Members
 
 - [Siddheshsingh Tanwar](https://github.com/siddheshsingh26): siddheshsinghtanwar@gmail.com 
