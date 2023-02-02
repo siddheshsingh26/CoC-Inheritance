@@ -43,11 +43,8 @@ In addition to mining, NFTones also features a full-featured music player, with 
 
 ## 🤖Tech-Stack
 
-Mention all languages/libraries/frameworks used in your project **domain-wise**   
-You can use icons too - find them [here](https://github.com/get-icon/geticon) 
-
 #### Front-end
-- HTML
+- Tail Wind CSS
 - CSS
 - NextJS
 
