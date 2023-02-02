@@ -2,6 +2,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import SpotifyApi from "../lib/spotify";
+const fetch = require("node-fetch");
 
 const CLINET_ID = process.env.NEXT_PUBLIC_CLIENT_ID;
 const CLIENT_SECRET = process.env.NEXT_PUBLIC_CLIENT_SECRET;
@@ -83,7 +84,51 @@ function Search() {
     // }))
   }
 
-  console.log("*#*#*#**# FINAL ALBUMS", albums);
+  const getAccessToken = async () => {
+    const res = await fetch("https://accounts.spotify.com/api/token", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Authorization:
+          "Basic " +
+          new Buffer.from(CLINET_ID + ":" + CLIENT_SECRET).toString("base64"),
+      },
+      body: "grant_type=client_credentials",
+    });
+    const json = await res.json();
+    return json.access_token;
+  };
+
+  const searchSpotify = async (query, type) => {
+    const accessToken = await getAccessToken();
+    const res = await fetch(
+      `https://api.spotify.com/v1/search?q=${query}&type=${type}`,
+      {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      }
+    );
+    const json = await res.json();
+    return json;
+  };
+
+  const searchh = async (query) => {
+    if (query == "") {
+      return query;
+    } else {
+      const songs = await searchSpotify(query, "track");
+      const artists = await searchSpotify(query, "artist");
+      const results = {
+        songs: songs.tracks.items,
+        artists: artists.artists.items,
+      };
+      return results;
+    }
+  };
+
+  const searchResults = searchh(searchInput);
+  console.log("here is songs", searchResults); //.albums.externallinks
 
   return (
     <div>
@@ -131,7 +176,6 @@ function Search() {
       </div>
 
       {albums.map((album, i) => {
-        console.log(album);
         return (
           <>
             <iframe

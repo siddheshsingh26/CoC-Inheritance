@@ -45,7 +45,3 @@ function Songs() {
 }
 
 export default Songs;
-
-{
-  /*  */
-}

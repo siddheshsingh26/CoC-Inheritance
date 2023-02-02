@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { HomeIcon } from "@heroicons/react/24/outline";
+import { HomeIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
 import { MagnifyingGlassCircleIcon } from "@heroicons/react/24/outline";
 import { BuildingLibraryIcon } from "@heroicons/react/24/outline";
 import { HeartIcon } from "@heroicons/react/24/outline";
@@ -105,20 +105,20 @@ function Sidebar() {
             </p>
           </button>
         </Link>
-
-        <button
-          className="flex   w-full rounded-md p-2
+        <Link href={"/processToMint"}>
+          <button
+            className="flex   w-full rounded-md p-2
         py-3
         hover:bg-green-700  items-center space-x-2 hover:text-white text-xl"
-        >
-          <HeartIcon className="h-8 w-8" />
-          <p className=" relative  group ">
-            <span className="m-1">Liked Songs</span>
-            <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
-            <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
-          </p>
-        </button>
-
+          >
+            <PencilSquareIcon className="h-8 w-8" />
+            <p className=" relative  group ">
+              <span className="m-1">Process to Mint</span>
+              <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
+              <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-700"></span>
+            </p>
+          </button>
+        </Link>
         <button
           className="flex   w-full rounded-md p-2
         py-3
