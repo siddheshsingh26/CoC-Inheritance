@@ -45,7 +45,6 @@ In addition to mining, NFTones also features a full-featured music player, with 
 
 #### Front-end
 - TailWind CSS
-- CSS
 - NextJS
 
 #### Back-end
