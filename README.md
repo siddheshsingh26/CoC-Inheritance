@@ -73,12 +73,20 @@ Partially implemented features in our project
 
 Future plans for our project 
 
-- Future Feature 1
-- Future Feature 2
+- Combining the two websites, one of which mints NFTs and the other of which offers Web Music Player.
 
 ## 💸Applications
 
->How can your project do its part in solving a real-life problem? What are its possible applications? Can it be monetized? Describe here.
+>Decentralization of Data: By storing user data and information on a decentralised network, MineTunes gives users more control over it. Users now have more control over their data, which aids in the prevention of data breaches.
+
+>Fair Compensation for Artists: By earning NFT tokens as they listen, users are indirectly supporting the artists behind the music. This creates a new revenue stream for artists and helps ensure that they are fairly compensated for their work.
+
+>Discovering New Music: NFTones features a full-featured music player with the ability to discover new music. This helps to promote new and emerging artists, giving them a platform to reach a wider audience.
+
+>Monetization: 
+1)NFTones can be monetized by charging users a monthly or yearly subscription fee to access the platform and its features.
+2)It can also monetize through advertisements or partnerships with music industry players.
+3)The platform can also earn revenue by selling NFT tokens and taking a percentage of transactions that occur on the platform.
 
 ## 🛠Project Setup
 
