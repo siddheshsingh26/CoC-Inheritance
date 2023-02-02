@@ -73,7 +73,7 @@ Future plans for our project
 
 ## 💸Applications
 
->Decentralization of Data: By storing user data and information on a decentralised network, MineTunes gives users more control over it. Users now have more control over their data, which aids in the prevention of data breaches.
+>Decentralization of Data: By storing user data and information on a decentralised network, NFTones gives users more control over it. Users now have more control over their data, which aids in the prevention of data breaches.
 
 >Fair Compensation for Artists: By earning NFT tokens as they listen, users are indirectly supporting the artists behind the music. This creates a new revenue stream for artists and helps ensure that they are fairly compensated for their work.
 
